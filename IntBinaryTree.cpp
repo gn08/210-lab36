@@ -10,7 +10,7 @@ IntBinaryTree::IntBinaryTree() {
 // insert accepts a TreeNode pointer and a pointer to a node.
 // The function inserts the node into the tree pointed to by 
 // the TreeNode pointer. This function is called recursively.
-void IntBinaryTree::insert(TreeNode *&nodePtr, TreeNode *&newNode) {
+void IntBinaryTree::insert(TreeNode *&nodePtr, const std::string& value) {
    if (nodePtr == nullptr){
       nodePtr = new TreeNode;                  // Insert the node.
       nodePtr->value = value;

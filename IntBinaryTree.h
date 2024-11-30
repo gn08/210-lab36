@@ -19,7 +19,7 @@ private:
 
    // Private member functions for internal operations.
    void insert(TreeNode *&, TreeNode *&);
-   void destroySubTree(TreeNode *);
+   void destroySubTree(TreeNode * nodePtr);
    void deleteNode(int, TreeNode *&);
    void makeDeletion(TreeNode *&);
    void displayInOrder(TreeNode *) const;
