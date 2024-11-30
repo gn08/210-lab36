@@ -9,9 +9,11 @@ class IntBinaryTree {
 private:
    // TreeNode is a private structure for IntBinaryTree nodes.
    struct TreeNode {
-      string value;         // The value in the node
+      int value;         // The value in the node
       TreeNode *left;    // Pointer to left child node
       TreeNode *right;   // Pointer to right child node
+
+      TreeNode(int val) : value(val), left(nullptr), right(nullptr) {}
    };
 
    // root points to the topmost node of the tree.
@@ -28,15 +30,15 @@ private:
 
 public:
    // Constructor initializes the root to nullptr, indicating an empty tree.
-   IntBinaryTree()     { root = nullptr; }
+   IntBinaryTree() : root(nullptr) {}
 
    // Destructor deallocates all nodes in the tree.
    ~IntBinaryTree()    { destroySubTree(root); }
 
    // Public interface for inserting, searching, and removing nodes.
-   void insertNode(int);
-   bool searchNode(int);
-   void remove(int);
+   void insertNode(int value);
+   bool searchNode(int value) const;
+   void remove(int value);
 
    // Public wrappers for tree traversal functions.
    void displayInOrder() const     {  displayInOrder(root); }
