@@ -32,11 +32,9 @@ void IntBinaryTree::insertNode(int num) {
 // destroySubTree is called by the destructor. It
 // deletes all nodes in the tree.                
 void IntBinaryTree::destroySubTree(TreeNode *nodePtr) {
-   if (nodePtr) {
-      if (nodePtr->left)
-         destroySubTree(nodePtr->left);
-      if (nodePtr->right)
-         destroySubTree(nodePtr->right);
+   if (nodePtr != nullptr) {
+      destroySubTree(nodePtr->left);
+      destroySubTree(nodePtr->right);
       delete nodePtr;
    }
 }
@@ -121,6 +119,11 @@ void IntBinaryTree::displayInOrder(TreeNode *nodePtr) const {
       displayInOrder(nodePtr->right);
    }
 }
+
+void IntBinaryTree::displayInOrder() const {
+   displayInOrder(root);
+}
+
 
 // The displayPreOrder member function displays the values      
 // in the subtree pointed to by nodePtr, via preorder traversal.
