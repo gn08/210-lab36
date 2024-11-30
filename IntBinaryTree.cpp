@@ -3,6 +3,10 @@
 #include "IntBinaryTree.h"
 using namespace std;
 
+IntBinaryTree::IntBinaryTree() {
+   root = nullptr;
+}
+
 // insert accepts a TreeNode pointer and a pointer to a node.
 // The function inserts the node into the tree pointed to by 
 // the TreeNode pointer. This function is called recursively.
