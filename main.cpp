@@ -15,7 +15,17 @@ int main() {
     string code;
 
     do{
-        
-    }
+
+        switch(choice){
+            case 1:
+                //
+            case 2:
+                //
+            case 3:
+                //
+            default:
+                cout << "Try again" << endl;
+        }
+    } while (choice != 3);
     return 0;
 }
