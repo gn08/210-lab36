@@ -1,5 +1,6 @@
 #include <iostream>
 #include "IntBinaryTree.h"
+#include <string>
 using namespace std;
 
 void displayMenu(){
@@ -23,8 +24,15 @@ int main() {
             case 1:
                 cout << "Enter code: ";
                 getline(cin, code);
-                tree.insertNode(code);
-                cout << "Code inserted" << endl;
+                try{
+                    int numericCode = stoi(code);
+                    tree.insertNode(numericCode);
+                    cout << "Code inserted" << endl;
+                } catch (){
+
+                } catch (){
+                    
+                }
                 break;
             case 2:
                 cout << "Codes in order: ";
