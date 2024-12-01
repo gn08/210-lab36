@@ -35,8 +35,9 @@ int main() {
                 }
                 break;
             case 2:
-                cout << "Codes in order: ";
+                cout << "Codes in order: " << endl;
                 tree.displayInOrder();
+                cout << endl;
                 break;
             case 3:
                 cout << "Exiting" << endl;
