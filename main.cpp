@@ -36,11 +36,19 @@ int main() {
                 cout << endl;
                 break;
             case 3:
-
+                cout << "Enter code to search: " << endl;
+                getline(cin, code);
+                if (tree.searchNode(code)) {
+                    cout << "Code found" << endl;
+                } else {
+                    cout << "Code not found" << endl;
+                }
+                break;
             case 4:
-
+                cout << "Enter code to delete: " << endl;
+                break;
             case 5:
-            
+                cout << "Enter code to modify: "
             case 6:
                 cout << "Exiting" << endl;
                 break;
