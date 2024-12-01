@@ -24,18 +24,20 @@ int main() {
         cin.ignore();
 
         switch(choice){
-            case 1:
+            case 1:{
                 cout << "Enter code: ";
                 getline(cin, code);
                 tree.insertNode(code);
                 cout << "Code inserted" << endl;
                 break;
-            case 2:
+            }
+            case 2: {
                 cout << "Codes in order: " << endl;
                 tree.displayInOrder();
                 cout << endl;
                 break;
-            case 3:
+            }
+            case 3:{
                 cout << "Enter code to search: " << endl;
                 getline(cin, code);
                 if (tree.searchNode(code)) {
@@ -44,13 +46,15 @@ int main() {
                     cout << "Code not found" << endl;
                 }
                 break;
-            case 4:
+            }
+            case 4:{
                 cout << "Enter code to delete: " << endl;
                 getline(cin, code);
                 tree.remove(code);
                 cout << "Code deleted" << endl;
                 break;
-            case 5:
+            }
+            case 5:{
                 cout << "Enter code to modify: "
                 string oldCode, newCode;
                 getline(cin, oldCode);
@@ -64,11 +68,15 @@ int main() {
                     cout << "Code not found" << endl;
                 }
                 break;
-            case 6:
+            }
+            case 6:{
                 cout << "Exiting" << endl;
                 break;
-            default:
+            }
+            default:{
                 cout << "Try again" << endl;
+                break;
+            }
         }
     } while (choice != 3);
     return 0;
