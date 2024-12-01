@@ -7,7 +7,10 @@ void displayMenu(){
     cout << endl << "Menu: " << endl;
     cout << "1. Insert code " << endl;
     cout << "2. Display codes in order " << endl;
-    cout << "3. Exit " << endl;
+    cout << "3. Search code " << endl;
+    cout << "5. Modify code" << endl;
+    cout << "6. Exit" << endl;
+     
 }
 
 int main() {
@@ -24,15 +27,8 @@ int main() {
             case 1:
                 cout << "Enter code: ";
                 getline(cin, code);
-                try{
-                    int numericCode = stoi(code);
-                    tree.insertNode(numericCode);
-                    cout << "Code inserted" << endl;
-                } catch (const invalid_argument& e){
-                    cout << "Enter number" << endl;
-                } catch (const out_of_range& e){
-                    cout << "Not in range" << endl;
-                }
+                tree.insertNode(code);
+                cout << "Code inserted" << endl;
                 break;
             case 2:
                 cout << "Codes in order: " << endl;
@@ -40,6 +36,12 @@ int main() {
                 cout << endl;
                 break;
             case 3:
+
+            case 4:
+
+            case 5:
+            
+            case 6:
                 cout << "Exiting" << endl;
                 break;
             default:
