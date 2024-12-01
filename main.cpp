@@ -46,9 +46,14 @@ int main() {
                 break;
             case 4:
                 cout << "Enter code to delete: " << endl;
+                getline(cin, code);
+                tree.remove(code);
+                cout << "Code deleted" << endl;
                 break;
             case 5:
                 cout << "Enter code to modify: "
+                getline(cin, code);
+                break;
             case 6:
                 cout << "Exiting" << endl;
                 break;
