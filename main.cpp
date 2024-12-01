@@ -55,7 +55,7 @@ int main() {
                 break;
             }
             case 5:{
-                cout << "Enter code to modify: "
+                cout << "Enter code to modify: ";
                 string oldCode, newCode;
                 getline(cin, oldCode);
                 if (tree.searchNode(oldCode)) {
