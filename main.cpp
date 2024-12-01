@@ -28,10 +28,10 @@ int main() {
                     int numericCode = stoi(code);
                     tree.insertNode(numericCode);
                     cout << "Code inserted" << endl;
-                } catch (){
-
-                } catch (){
-                    
+                } catch (const invalid_argument& e){
+                    cout << "Enter number" << endl;
+                } catch (const out_of_range& e){
+                    cout << "Not in range" << endl;
                 }
                 break;
             case 2:
