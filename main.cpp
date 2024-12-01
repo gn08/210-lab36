@@ -52,7 +52,17 @@ int main() {
                 break;
             case 5:
                 cout << "Enter code to modify: "
-                getline(cin, code);
+                string oldCode, newCode;
+                getline(cin, oldCode);
+                if (tree.searchNode(oldCode)) {
+                    cout << "Enter new code: ";
+                    getline(cin, newCode);
+                    tree.remove(oldCode);
+                    tree.insertNode(newCode);
+                    cout << "Code modified" << endl;
+                } else {
+                    cout << "Code not found" << endl;
+                }
                 break;
             case 6:
                 cout << "Exiting" << endl;

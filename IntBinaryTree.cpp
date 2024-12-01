@@ -6,7 +6,7 @@ using namespace std;
 // insert accepts a TreeNode pointer and a pointer to a node.
 // The function inserts the node into the tree pointed to by 
 // the TreeNode pointer. This function is called recursively.
-void IntBinaryTree::insert(TreeNode *&nodePtr, int value) {
+void IntBinaryTree::insert(TreeNode *&nodePtr, const string& value) {
    if (nodePtr == nullptr){
       nodePtr = new TreeNode(value);                  // Insert the node.
    } else if (value < nodePtr->value){
@@ -18,7 +18,7 @@ void IntBinaryTree::insert(TreeNode *&nodePtr, int value) {
 
 // insertNode creates a new node to hold num as its value,
 // and passes it to the insert function.                  
-void IntBinaryTree::insertNode(int num) {
+void IntBinaryTree::insertNode(const string& value) {
    insert(root, num);
 }
 
@@ -36,7 +36,7 @@ void IntBinaryTree::destroySubTree(TreeNode *nodePtr) {
 // searchNode determines if a value is present in  
 // the tree. If so, the function returns true.     
 // Otherwise, it returns false.                    
-bool IntBinaryTree::searchNode(int num) const{
+bool IntBinaryTree::searchNode(const string& value) const{
    TreeNode *nodePtr = root;
 
    while (nodePtr)    {
