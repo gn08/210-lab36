@@ -42,7 +42,7 @@ bool IntBinaryTree::searchNode(const string& value) const{
    while (nodePtr)    {
       if (nodePtr->value == value)
          return true;
-      else if (num < nodePtr->value)
+      else if (value < nodePtr->value)
          nodePtr = nodePtr->left;
       else
          nodePtr = nodePtr->right;
